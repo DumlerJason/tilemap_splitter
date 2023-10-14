@@ -36,7 +36,9 @@ Run the resulting application from the command line with the "--help" parameter 
 Reference the tile_map_lib in your application and use it directly.
 
 ## Some Notes:
-The shrink and grow operations should be "pixel perfect".  i.e. if growing a bitmap from 16x16 to 64x64, each 16x16 pixel should be 4x4 without any sort of blurring.
+Shrinking a tilemap will result the underlying art changing.  Going from 64x64 tiles to 16x16 tiles will necessarily result in the loss of some information somewhere.
+
+The grow operations should be "pixel perfect".  i.e. if growing a bitmap from 16x16 to 64x64, each pixel should now be 4x4 without any sort of blurring.  This is also true with shrink operations, but in that example pixel art starting at 64x64 isn't likely using a brush size of 4x4 so there will be some loss of information and the shrunken pixel art will not be "pixel perfect".
 
 When splitting a tile map, you can provide a names file using the --names-file parameter. The file is a JSON formatted file like so:
 ```json
