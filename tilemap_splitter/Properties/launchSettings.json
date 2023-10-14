@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "tilemap_splitter": {
+      "commandName": "Project",
+      "commandLineArgs": "--mode=Join\r\n--scale=4\r\n--tile-size=16x16\r\n--tile-map-size=0x0\r\n--offset=0x0\r\n--names-file=\"C:\\Users\\dumle\\Documents\\Godot\\Resources\\Controller Buttons\\buttons.json\"\r\n--source-file=\"C:\\Users\\dumle\\Documents\\Godot\\Resources\\Controller Buttons\\PS4\\PS4.png\"\r\n--source-directory=\"C:\\Users\\dumle\\Documents\\Godot\\Resources\\Controller Buttons\\PS4\\Splitter\"\r\n--target-file=\"C:\\Users\\dumle\\Documents\\Godot\\Resources\\Controller Buttons\\PS4\\PS4_joined.png\"\r\n--target-directory=\"C:\\Users\\dumle\\Documents\\Godot\\Resources\\Controller Buttons\\PS4\""
+    }
+  }
+}

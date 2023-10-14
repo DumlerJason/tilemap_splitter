@@ -1,0 +1,248 @@
+{
+  "names_list": [],
+  "names_map": [
+    {
+      "name": "button_0_up",
+      "x": 0,
+      "y": 0
+    },
+    {
+      "name": "button_0_down",
+      "x": 1,
+      "y": 0
+    },
+
+    {
+      "name": "button_2_up",
+      "x": 0,
+      "y": 1
+    },
+    {
+      "name": "button_2_down",
+      "x": 1,
+      "y": 1
+    },
+
+    {
+      "name": "button_3_up",
+      "x": 0,
+      "y": 2
+    },
+    {
+      "name": "button_3_down",
+      "x": 1,
+      "y": 2
+    },
+
+    {
+      "name": "button_1_up",
+      "x": 0,
+      "y": 3
+    },
+    {
+      "name": "button_1_down",
+      "x": 1,
+      "y": 3
+    },
+
+    {
+      "name": "button_start_down",
+      "x": 2,
+      "y": 0
+    },
+    {
+      "name": "button_start_up",
+      "x": 3,
+      "y": 0
+    },
+
+    {
+      "name": "button_controller_up",
+      "x": 4,
+      "y": 0
+    },
+    {
+      "name": "button_controller_down",
+      "x": 5,
+      "y": 0
+    },
+
+    {
+      "name": "button_menu_up",
+      "x": 6,
+      "y": 0
+    },
+    {
+      "name": "button_menu_down",
+      "x": 7,
+      "y": 0
+    },
+
+    {
+      "name": "dpad",
+      "x": 2,
+      "y": 1
+    },
+    {
+      "name": "dpad_right",
+      "x": 3,
+      "y": 1
+    },
+    {
+      "name": "dpad_down",
+      "x": 4,
+      "y": 1
+    },
+    {
+      "name": "dpad_left",
+      "x": 5,
+      "y": 1
+    },
+    {
+      "name": "dpad_up",
+      "x": 6,
+      "y": 1
+    },
+    {
+      "name": "dpad_all",
+      "x": 7,
+      "y": 1
+    },
+
+    {
+      "name": "left_trigger_down",
+      "x": 8,
+      "y": 0
+    },
+    {
+      "name": "left_trigger_up",
+      "x": 9,
+      "y": 0
+    },
+
+    {
+      "name": "right_trigger_down",
+      "x": 8,
+      "y": 1
+    },
+    {
+      "name": "right_trigger_up",
+      "x": 9,
+      "y": 1
+    },
+
+    {
+      "name": "left_shoulder_down",
+      "x": 8,
+      "y": 2
+    },
+    {
+      "name": "left_shoulder_up",
+      "x": 9,
+      "y": 2
+    },
+
+    {
+      "name": "right_shoulder_down",
+      "x": 8,
+      "y": 3
+    },
+    {
+      "name": "right_shoulder_up",
+      "x": 9,
+      "y": 3
+    },
+
+    {
+      "name": "axis_0",
+      "x": 2,
+      "y": 3
+    },
+    {
+      "name": "axis_0_up",
+      "x": 3,
+      "y": 3
+    },
+    {
+      "name": "axis_0_down",
+      "x": 4,
+      "y": 3
+    },
+    {
+      "name": "axis_0_left",
+      "x": 5,
+      "y": 3
+    },
+    {
+      "name": "axis_0_right",
+      "x": 6,
+      "y": 3
+    },
+    {
+      "name": "axis_0_press",
+      "x": 7,
+      "y": 3
+    },
+
+    {
+      "name": "axis_1",
+      "x": 2,
+      "y": 2
+    },
+    {
+      "name": "axis_1_up",
+      "x": 3,
+      "y": 2
+    },
+    {
+      "name": "axis_1_down",
+      "x": 4,
+      "y": 2
+    },
+    {
+      "name": "axis_1_left",
+      "x": 5,
+      "y": 2
+    },
+    {
+      "name": "axis_1_right",
+      "x": 6,
+      "y": 2
+    },
+    {
+      "name": "axis_1_press",
+      "x": 7,
+      "y": 2
+    },
+    {
+      "name": "joystick",
+      "x": 2,
+      "y": 4
+    },
+    {
+      "name": "joystick_up",
+      "x": 3,
+      "y": 4
+    },
+    {
+      "name": "joystick_down",
+      "x": 4,
+      "y": 4
+    },
+    {
+      "name": "joystick_left",
+      "x": 5,
+      "y": 4
+    },
+    {
+      "name": "joystick_right",
+      "x": 6,
+      "y": 4
+    },
+    {
+      "name": "joystick_press",
+      "x": 7,
+      "y": 4
+    }
+  ]
+}
