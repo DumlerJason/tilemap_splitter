@@ -204,6 +204,10 @@ namespace tile_map_lib
                     target_directory = source_directory;
                     target_filename = Path.Combine(target_directory, target_file);
                 }
+                else
+                {
+                    target_filename = target_file;
+                }
 
                 using Bitmap source_bitmap = (Bitmap)Bitmap.FromFile(source_file);
                 if (source_bitmap == null)
@@ -215,7 +219,7 @@ namespace tile_map_lib
                 uint new_width = (uint)source_bitmap.Width * scale;
                 uint new_height = (uint)source_bitmap.Height * scale;
 
-                using Bitmap target_bitmap = new Bitmap((int)new_width, (int)new_height);
+                using Bitmap target_bitmap = new ((int)new_width, (int)new_height);
                 using Graphics target_graphics = Graphics.FromImage(target_bitmap);
                 target_graphics.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
                 target_graphics.PixelOffsetMode = System.Drawing.Drawing2D.PixelOffsetMode.HighQuality;
