@@ -164,6 +164,27 @@ namespace tile_map_lib
             }
         }
 
+        static bool TestFileOutput(string target_file)
+        {
+            try
+            {
+                string target_file_test_name = $"{target_file}.test";
+                File.WriteAllText(target_file_test_name, "test");
+
+                if (File.Exists(target_file_test_name))
+                {
+                    File.Delete(target_file_test_name);
+                    return true;
+                }
+
+                return false;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
         public static bool Enbiggen(string source_file, string target_file, uint scale, out string message)
         {
             message = string.Empty;
@@ -199,14 +220,28 @@ namespace tile_map_lib
                 string source_directory = Path.GetDirectoryName(source_file) ?? "";
                 string target_directory = Path.GetDirectoryName(target_file) ?? "";
                 string target_filename = string.Empty;
-                if (StringIsNullOrEmpty(target_directory) && !StringIsNullOrEmpty(source_directory))
+
+                if (!StringIsNullOrEmpty(target_directory))
                 {
-                    target_directory = source_directory;
-                    target_filename = Path.Combine(target_directory, target_file);
+                    target_filename = target_file;
                 }
                 else
                 {
-                    target_filename = target_file;
+                    if (!StringIsNullOrEmpty(source_directory))
+                    {
+                        target_directory = source_directory;
+                        target_filename = Path.Combine(target_directory, target_file);
+                    }
+                    else
+                    {
+                        target_filename = target_file;
+                    }
+                }
+
+                if (!TestFileOutput(target_filename))
+                {
+                    message = $"Could not write image file.";
+                    return false;
                 }
 
                 using Bitmap source_bitmap = (Bitmap)Bitmap.FromFile(source_file);
