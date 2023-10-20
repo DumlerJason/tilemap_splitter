@@ -240,7 +240,7 @@ namespace tile_map_lib
 
                 if (!TestFileOutput(target_filename))
                 {
-                    message = $"Could not write image file.";
+                    message = $"Cannot write image file.";
                     return false;
                 }
 
@@ -307,10 +307,28 @@ namespace tile_map_lib
                 string source_directory = Path.GetDirectoryName(source_file) ?? "";
                 string target_directory = Path.GetDirectoryName(target_file) ?? "";
                 string target_filename = string.Empty;
-                if (StringIsNullOrEmpty(target_directory) && !StringIsNullOrEmpty(source_directory))
+
+                if (!StringIsNullOrEmpty(target_directory))
                 {
-                    target_directory = source_directory;
-                    target_filename = Path.Combine(target_directory, target_file);
+                    target_filename = target_file;
+                }
+                else
+                {
+                    if (!StringIsNullOrEmpty(source_directory))
+                    {
+                        target_directory = source_directory;
+                        target_filename = Path.Combine(target_directory, target_file);
+                    }
+                    else
+                    {
+                        target_filename = target_file;
+                    }
+                }
+
+                if (!TestFileOutput(target_filename))
+                {
+                    message = $"Cannot write image file.";
+                    return false;
                 }
 
                 using Bitmap source_bitmap = (Bitmap)Bitmap.FromFile(source_file);
@@ -390,6 +408,12 @@ namespace tile_map_lib
                 if (!Directory.Exists(target_directory))
                 {
                     message = Constants.INVALID_DIRECTORY;
+                    return false;
+                }
+
+                if (TestFileOutput(Path.Combine(target_directory, "test.txt")))
+                {
+                    message = "Cannot write image files.";
                     return false;
                 }
 
@@ -545,6 +569,12 @@ namespace tile_map_lib
                 if (StringIsNullOrEmpty(target_directory))
                 {
                     message = Constants.INVALID_DIRECTORY;
+                    return false;
+                }
+
+                if (!TestFileOutput(target_file))
+                {
+                    message = "Cannot write image file.";
                     return false;
                 }
 
